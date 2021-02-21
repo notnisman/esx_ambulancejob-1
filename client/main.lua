@@ -321,6 +321,8 @@ end
 
 function RemoveItemsAfterRPDeath()
 	TriggerServerEvent('esx_ambulancejob:setDeathStatus', false)
+				TriggerEvent('esx_status:set', 'hunger', 500000)
+				TriggerEvent('esx_status:set', 'thirst', 500000)		
 
 	Citizen.CreateThread(function()
 		DoScreenFadeOut(800)
